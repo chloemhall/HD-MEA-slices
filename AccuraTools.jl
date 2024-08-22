@@ -329,7 +329,7 @@ end
 # •·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·• #
 
 """ 
-convert: Chloe's attempt to update this for the latest documented 3 brain systems.... Chloe voltage conversion new documentation from Chiara @3Brain
+convert: Chloe's voltage conversion new documentation (2022) from Chiara @3Brain
 """
 function VoltageConvert( data::Matrix{UInt16}, Variables::Dict{Any, Any} )
     MaxVolt = Variables[ "MaxAnalogValue" ];
@@ -1026,9 +1026,9 @@ end
 # •·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·• #
 #•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·•·•·•·• #
 function spikedetection(filtered_data, SamplingRate, organoid_channels)
-    window_ms = 5 #put these variables in here like scalars. 
+    window_ms = 8 #put these variables in here like scalars. 
     bit_ms = 2
-    distance_ms = 0.4
+    distance_ms = 0.5
     σ = 5
     window = ms2frames(window_ms, SamplingRate)
     bit = ms2frames(bit_ms, SamplingRate)
